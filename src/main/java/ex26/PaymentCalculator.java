@@ -14,13 +14,13 @@ public class PaymentCalculator {
 
     public PaymentCalculator(double balance, double apr, double payment) {
         this.b = balance;
-        this.i = apr /100/365;
+        this.i = apr/100.0/365.0;
         this.p = payment;
     }
 
     public double calculateMonthsUntilPaidOff() {
 
-        double months = -(1/30) * log(1 + this.b/this.p * (1 - Math.pow((1 + i), 30))) / log(1 + i);
+        double months = -(1.0/30.0) * log(1.0 + this.b / this.p * (1.0 - Math.pow((1.0 + this.i), 30.0))) / log(1.0 + this.i);
         return months;
     }
 }

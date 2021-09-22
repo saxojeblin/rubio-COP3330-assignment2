@@ -15,18 +15,16 @@ public class App
 
         double b, i, payment, months;
 
-
         System.out.print("What is your balance? ");
         b = input.nextDouble();
         System.out.print("What is the APR on the card (as a percent)? ");
-        i = input.nextDouble() / 100 / 365;
+        i = input.nextDouble();
         System.out.print("What is the monthly payment you can make? ");
         payment = input.nextDouble();
 
         PaymentCalculator creditData = new PaymentCalculator(b,i,payment);
-        months = creditData.calculateMonthsUntilPaidOff();
+        months = Math.ceil(creditData.calculateMonthsUntilPaidOff());
 
-        System.out.printf("It will take you %f months to pay off this card.", months);
-
+        System.out.printf("It will take you %.0f months to pay off this card.", months);
     }
 }
