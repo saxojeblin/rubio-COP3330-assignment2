@@ -11,6 +11,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.Scanner;
+
 public class AppTest {
 
     @BeforeClass
@@ -18,5 +20,11 @@ public class AppTest {
         App app = new App();
     }
 
+    @Test
+    public void testFindUpperBound() {
+        assertEquals(10, App.findUpperBound(1));
+        assertEquals(100, App.findUpperBound(2));
+        assertEquals(1000, App.findUpperBound(3));
+    }
 
 }

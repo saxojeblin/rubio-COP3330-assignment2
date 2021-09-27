@@ -70,7 +70,6 @@ public class App {
         }
 
         return numGuesses;
-
     }
 
     public static int getGuess(Scanner input) {
