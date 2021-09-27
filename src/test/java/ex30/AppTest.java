@@ -5,11 +5,8 @@
 
 package ex30;
 
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
 
 public class AppTest {
 

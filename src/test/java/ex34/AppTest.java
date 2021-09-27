@@ -5,13 +5,12 @@
 
 package ex34;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.Scanner;
+import org.testng.annotations.BeforeClass;
 
 public class AppTest {
 

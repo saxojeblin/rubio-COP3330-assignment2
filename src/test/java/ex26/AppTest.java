@@ -6,11 +6,12 @@
 
 package ex26;
 
-import static java.lang.Math.log;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.BeforeClass;
 
 public class AppTest {
 
@@ -27,7 +28,7 @@ public class AppTest {
         double p = 100.0;
         PaymentCalculator creditData = new PaymentCalculator(b,i,p);
 
-        assertEquals(70, Math.ceil(creditData.calculateMonthsUntilPaidOff()), 0.1);
+        assertEquals(70, Math.ceil(creditData.calculateMonthsUntilPaidOff()));
     }
 
 }

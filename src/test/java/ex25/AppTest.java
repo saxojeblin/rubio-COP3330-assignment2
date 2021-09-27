@@ -6,11 +6,13 @@
 
 package ex25;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.BeforeClass;
 
 import java.util.regex.Pattern;
 
@@ -24,8 +26,8 @@ public class AppTest
     @Test
     public void testFindWeakerPassword() {
 
-        assertTrue(Pattern.matches("[0-9]+" , "12345"));
-        assertTrue(Pattern.matches("[a-zA-Z]+" ,"abcdef"));
+        assertEquals(true, Pattern.matches("[0-9]+" , "12345"));
+        assertEquals(true, Pattern.matches("[a-zA-Z]+" ,"abcdef"));
 
     }
 

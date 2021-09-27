@@ -3,16 +3,15 @@
  *  Copyright 2021 Nicholas Rubio
  */
 
-package ex28;
-import java.util.Scanner;
+package ex35;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+
 public class AppTest {
 
     @BeforeClass
@@ -20,17 +19,6 @@ public class AppTest {
         App app = new App();
     }
 
-    @Test
-    public void testFindTotal() {
 
-        int num, sum=0;
-
-        for (int i=0; i<5; i++) {
-            num = i+1;
-            sum += num;
-        }
-
-        Assert.assertEquals(15, sum);
-    }
 
 }
