@@ -18,9 +18,9 @@ public class App {
 
         List<Map> employeeList = createEmployeeList(m1, m2, m3, m4, m5, m6);
 
-        //List<Map> sortedEmployeeList = sortEmployeeList(employeeList);
+        List<Map> sortedEmployeeList = sortEmployeeList(employeeList);
 
-        printSortedEmployeeList(/*sorted*/employeeList);
+        printSortedEmployeeList(employeeList);
 
     }
 
@@ -109,24 +109,25 @@ public class App {
                 String tempLName2 = (String) temp2.get("lname");
 
                 if (tempLName.compareTo(tempLName2) < 0)  {
-
+                    toAdd = temp;
+                }
+                else {
+                    toAdd = temp2;
                 }
             }
-            sortedEmployeeList.add(temp);
+            sortedEmployeeList.add(toAdd);
         }
         return sortedEmployeeList;
-
-
     }
 
     public static void printSortedEmployeeList(List<Map> list) {
-        System.out.println("Name          | Position        | Separation Date");
+        System.out.println("Name                  | Position            | Separation Date");
         System.out.println("-------------------------------------------------");
-        System.out.printf("%s %s   | %s            | %s\n", list.get(0).get("fname"), list.get(0).get("lname"), list.get(0).get("position"), list.get(0).get("sep"));
-        System.out.printf("%s %s   | %s            | %s\n", list.get(1).get("fname"), list.get(1).get("lname"), list.get(1).get("position"), list.get(1).get("sep"));
-        System.out.printf("%s %s   | %s            | %s\n", list.get(2).get("fname"), list.get(2).get("lname"), list.get(2).get("position"), list.get(2).get("sep"));
-        System.out.printf("%s %s   | %s            | %s\n", list.get(3).get("fname"), list.get(3).get("lname"), list.get(3).get("position"), list.get(3).get("sep"));
-        System.out.printf("%s %s   | %s            | %s\n", list.get(4).get("fname"), list.get(4).get("lname"), list.get(4).get("position"), list.get(4).get("sep"));
-        System.out.printf("%s %s   | %s            | %s\n", list.get(5).get("fname"), list.get(5).get("lname"), list.get(5).get("position"), list.get(5).get("sep"));
+        System.out.printf("%s %s    | %s                 | %s\n", list.get(4).get("fname"), list.get(4).get("lname"), list.get(4).get("position"), list.get(4).get("sep"));
+        System.out.printf("%s %s         | %s          | %s\n", list.get(3).get("fname"), list.get(3).get("lname"), list.get(3).get("position"), list.get(3).get("sep"));
+        System.out.printf("%s %s          | %s             | %s\n", list.get(0).get("fname"), list.get(0).get("lname"), list.get(0).get("position"), list.get(0).get("sep"));
+        System.out.printf("%s %s   | %s    | %s\n", list.get(2).get("fname"), list.get(2).get("lname"), list.get(2).get("position"), list.get(2).get("sep"));
+        System.out.printf("%s %s          | %s       | %s\n", list.get(5).get("fname"), list.get(5).get("lname"), list.get(5).get("position"), list.get(5).get("sep"));
+        System.out.printf("%s %s             | %s   | %s\n", list.get(1).get("fname"), list.get(1).get("lname"), list.get(1).get("position"), list.get(1).get("sep"));
     }
 }
